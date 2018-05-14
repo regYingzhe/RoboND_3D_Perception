@@ -190,10 +190,10 @@ def pr2_mover(object_list):
     print("Inside pr2_mover")
 
     # TODO: Initialize variables
-    outputFileName = "output_3.yaml";
+    outputFileName = "output_2.yaml";
     object_list_param = rospy.get_param('/object_list');
     test_scene_num = Int32()
-    test_scene_num.data = 3
+    test_scene_num.data = 2
     dict_list = []
     # TODO: Get/Read parameters
     box_param = rospy.get_param('/dropbox')
@@ -287,7 +287,7 @@ if __name__ == '__main__':
     detected_objects_pub = rospy.Publisher("/detected_objects", DetectedObjectsArray, queue_size=1)
     # TODO: Load Model From disk
 
-    model = pickle.load(open('model_pick4.sav', 'rb'))
+    model = pickle.load(open('model_pick2.sav', 'rb'))
     clf = model['classifier']
     encoder = LabelEncoder()
     encoder.classes_ = model['classes']
